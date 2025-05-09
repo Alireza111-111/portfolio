@@ -296,6 +296,12 @@ body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212529;
 }
+
+
+
+
+
+
 .navbar-custom {
   background-color: #212529;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -377,7 +383,78 @@ body {
   .clock-navbar {
     align-self: center !important;
   }
+
+  .mobile-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ 
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .mobile-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .mobile-menu.open {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
+
+
+
+
+
+/* پنهان‌سازی ساعت در سایز 768px و پایین‌تر */
+@media (max-width: 768.98px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* نمایش ساعت در سایز بزرگ‌تر از 768px */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: flex !important;
+    align-items: center;
+  }
+}
+
+
+
+/* دکمه همبرگر فقط در موبایل */
+@media (max-width: 768.98px) {
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
 
 
 
